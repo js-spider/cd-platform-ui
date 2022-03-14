@@ -1,0 +1,28 @@
+@import '../../../assets/lessMixin/index';
+
+.hx-card-task{
+  .box-shadow-light();
+  .border-radius();
+  .bg-white();
+  .inline();
+  &-title{
+    height: 40px;
+    .font-mini();
+    .padding15();
+    .vertical-center();
+    .border-box();
+    .border-bg1();
+    &-left{
+      .flex1();
+      .horizontal-left();
+    }
+    &-right{
+      .flex1();
+      .horizontal-right();
+    }
+  };
+  &-content{
+    min-height: 120px;
+    .padding15();
+  }
+}

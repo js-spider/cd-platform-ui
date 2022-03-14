@@ -11,6 +11,13 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
+    'no-restricted-exports': 0,
+    'no-multiple-empty-lines': 0,
+    'import/extensions': 0,
+    'import/no-unresolved': 0,
+    'import/no-extraneous-dependencies': 0,
+    'vue/multi-word-component-names': 0,
+    'vuejs-accessibility/click-events-have-key-events': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
