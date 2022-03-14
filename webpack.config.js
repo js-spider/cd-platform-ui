@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const componentList = {};
 
 async function getVueList() {
-  const files = await glob.sync('src/components/**/index.vue');
+  const files = await glob.sync('src/components/**/index.js');
   files.forEach((file) => {
     const comp = file.split(/[/.]/)[2];
     componentList[comp] = `./${file}`;
