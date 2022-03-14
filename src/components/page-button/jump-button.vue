@@ -1,5 +1,5 @@
 <template>
-  <Button :type="btnType">{{ text }}</Button>
+  <Button :type="btnType">{{ curText }}</Button>
 </template>
 <script>
 import { Button } from 'ant-design-vue';
@@ -7,7 +7,7 @@ import { Button } from 'ant-design-vue';
 export default {
   components: { Button },
   props: {
-    text: {
+    curText: {
       type: String,
       default: '',
     },

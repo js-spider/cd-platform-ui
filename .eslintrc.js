@@ -11,6 +11,7 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
+    'vue/no-parsing-error': 0,
     'no-restricted-exports': 0,
     'no-multiple-empty-lines': 0,
     'import/extensions': 0,

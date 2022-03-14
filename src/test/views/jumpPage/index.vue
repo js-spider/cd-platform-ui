@@ -9,7 +9,7 @@
           <Icon type="loading-3-quarters" />
         </template>
       </Pj><Br/>
-      <Pj text=" < 返回上一页" tooltip="这是一个测试跳转链接的案例" :to="-1" :disabled="true"></Pj><Br/>
+      <Pj tooltip="这是一个测试跳转链接的案例" :to="-1" :disabled="true"> << 返回上一页 </Pj><Br/>
       <Pj type="button" text="测试跳转链接1" to="http://www.baidu.com"></Pj><Br/>
       <Pj  type="button" text="刷新"  :to="0" ></Pj><Br/>
       <Pj type="button" text=" < 返回上一页" tooltip="这是一个测试跳转链接的案例" :to="-1"></Pj><Br/>

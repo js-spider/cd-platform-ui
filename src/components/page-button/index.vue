@@ -1,16 +1,16 @@
 <template>
-  <span @click="jumpTo">
+  <span @click="jumpTo" :style="{ cursor : this.disabled ? 'not-allowed' : 'pointer' }">
     <Tooltip v-if="tooltip">
       <template slot="title">
         {{tooltip}}
       </template>
       <slot name="text">
-        <component v-if="curType" :is="curType" v-bind="$attrs" :disabled="disabled"></component>
+        <component :is="curType" v-bind="dynamicComponent"></component>
       </slot>
     </Tooltip>
     <span v-else>
       <slot name="text" >
-        <component  :is="curType" v-bind="$attrs" :disabled="disabled"></component>
+        <component :is="curType"  v-bind="dynamicComponent"></component>
       </slot>
     </span>
   </span>
@@ -28,6 +28,7 @@ export default {
       type: String,
       default: 'a',
     },
+    text: [String, undefined],
     to: [String, Number],
     tooltip: String,
     blank: {
@@ -39,6 +40,7 @@ export default {
       default: false,
     },
   },
+
   computed: {
     curType() {
       const TYPE = this.type.toUpperCase();
@@ -49,6 +51,22 @@ export default {
         default: cur = typeMap.A;
       }
       return cur;
+    },
+    curText() {
+      const { text, $slots } = this;
+      if (text) {
+        return text;
+      } if (Array.isArray($slots.default) && $slots.default.length > 0) {
+        return this.$slots.default[0].text;
+      }
+      return '';
+    },
+    dynamicComponent() {
+      return {
+        curText: this.curText,
+        disabled: this.disabled,
+        ...this.$attrs,
+      };
     },
   },
   methods: {

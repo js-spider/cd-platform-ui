@@ -1,10 +1,10 @@
 <template>
-  <a>{{text}}</a>
+  <a>{{curText}}</a>
 </template>
 <script>
 export default {
   props: {
-    text: {
+    curText: {
       type: String,
       default: '',
     },
