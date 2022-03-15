@@ -22,6 +22,7 @@ import B from './jump-button.vue';
 
 const typeMap = { A, B };
 export default {
+  name: 'PageButton',
   components: { Tooltip },
   props: {
     type: {
