@@ -1,9 +1,11 @@
 import Card from './card/index.vue';
 import PageButton from './page-button/index.vue';
+import Upload from './upload/index.vue';
 
 const components = [
   Card,
   PageButton,
+  Upload,
 ];
 
 
@@ -19,6 +21,5 @@ const install = (Vue) => {
 
 export default {
   install,
-  Card,
-  PageButton,
+  ...components,
 };

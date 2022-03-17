@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'Container',
   props: {
     inline: String,
   },

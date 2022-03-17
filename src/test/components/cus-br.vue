@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'Br',
   props: {
     line: {
       type: [String, Number],

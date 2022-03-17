@@ -24,11 +24,10 @@
 <script>
 import PageButton from '@/components/page-button';
 import { Icon } from 'ant-design-vue';
-import { Container, Br } from '@/test/components';
 
 export default {
   components: {
-    PageButton, Icon, Br, Container,
+    PageButton, Icon,
   },
 };
 </script>

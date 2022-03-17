@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Demo from '@/test/views/jumpPage/index';
+import Demo from '@/test/views/upload/index';
 
 export default {
   components: { Demo },
