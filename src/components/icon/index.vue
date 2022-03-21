@@ -6,17 +6,17 @@
     </svg>
     </span>
     <span v-else>
-      <Icon :type="type" :theme="theme"></Icon>
+      <AntIcon :type="type" :theme="theme"></AntIcon>
     </span>
   </span>
 </template>
 <script>
 
 import '@/assets/iconfont/iconfont';
-import { Icon } from 'ant-design-vue';
+import { Icon as AntIcon } from 'ant-design-vue';
 
 export default {
-  components: { Icon },
+  components: { AntIcon },
   props: {
     type: String,
     theme: String,
