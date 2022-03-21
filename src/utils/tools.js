@@ -16,8 +16,7 @@ export const delay = (function () {
 }());
 
 
-export const handleDownload = (file) => {
-  console.log('file.vue: 27 >>>>> ', file);
+export const URLDownload = (file) => {
   const link = document.createElement('a');
   link.style.display = 'none';
   link.download = file.name;
@@ -28,6 +27,8 @@ export const handleDownload = (file) => {
   document.body.removeChild(link);
   return true;
 };
+
+
 
 
 export default {};

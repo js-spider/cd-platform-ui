@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Demo from '@/test/views/upload/index';
+import Demo from '@/test/views/Icon/index';
 
 export default {
   components: { Demo },

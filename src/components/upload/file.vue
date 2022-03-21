@@ -4,14 +4,14 @@
     :before-upload="beforeUpload"
     :customRequest="customRequest"
     @change="handleChange"
-    @download="handleDownload"
+    @download="URLDownload"
   >
     <slot></slot>
   </Upload>
 </template>
 <script>
 import { Upload } from 'ant-design-vue';
-import { handleDownload } from '@/utils/tools.js';
+import { URLDownload } from '@/utils/tools.js';
 
 export default {
   components: { Upload },
@@ -24,7 +24,7 @@ export default {
     },
   },
   methods: {
-    handleDownload,
+    URLDownload,
     customRequest(options) {
       this.$emit('change', 'customRequest', options);
     },
